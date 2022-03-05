@@ -1,3 +1,5 @@
+<!--Sabrina Garay Portfolio 1 Project-->
+
 <?php 
     //Variable for calculator result
     $mathAnswer = "";
@@ -11,54 +13,49 @@
             //Selects what operation to carry out and echoes result
             if ($_POST["mathOperation"] == "+") {
                 $mathAnswer = $_POST["firstNumber"] + $_POST["secondNumber"];
-                echo($mathAnswer);
             }
             if ($_POST["mathOperation"] == "-") {
                 $mathAnswer = $_POST["firstNumber"] - $_POST["secondNumber"];
-                echo($mathAnswer);
             }
             if ($_POST["mathOperation"] == "x") {
                 $mathAnswer = $_POST["firstNumber"] * $_POST["secondNumber"];
-                echo($mathAnswer);
             }
-            if ($_POST["mathOperation"] == "/") {
+            if ($_POST["mathOperation"] == "÷") {
                 $mathAnswer = $_POST["firstNumber"] / $_POST["secondNumber"];
-                echo($mathAnswer);
             }
         }
 
-        //Echoes if input is an invalid number
+        //Echoes if input is an invalid number or if there is an empty field
         else {
-            echo("Please enter a valid number.")
+            echo("Please make sure you have entered two valid numbers.");
         }
     }
-
-    //Echoes if one of the input fields is empty
-    else {
-        echo("Please make sure to enter a number in both fields.")
-    };
 
 ?>
 
 <html>
     <head>
-        <title>Basic Calculator</title>
+        <title>Calculator Portfolio 1</title>
+        <link rel="stylesheet" href="style.css">
     <head>
     <body>
-        <h1>Basic Calculator</h1>
+        <h1>Enter two numbers to calculate below...</h1>
 
         <form action="index.php" method="POST">
             <!--First Number Input Box-->
-            <label for="firstNumber">First Number:</label>
-            <input type="text" id="firstNumber" name="firstNumber" placeholder="Enter a number!"><br>
+            <label for="firstNumber"></label>
+            <input type="text" id="firstNumber" name="firstNumber" placeholder="Enter a number!" class="inputBox"><br>
 
             <!--Second Number Input Box-->
-            <label for="secondNumber">Second Number:</label>
-            <input type="text" id="secondNumber" name="secondNumber" placeholder="Enter a number!"><br>
+            <label for="secondNumber"></label>
+            <input type="text" id="secondNumber" name="secondNumber" placeholder="Enter a number!" class="inputBox"><br>
+
+            <!--Results Box-->
+            <br><input name="mathAnswer" value="<?php echo($mathAnswer); ?>" readonly placeholder="Your result is..." id="answerBox"><br>
 
             <!--Calculator Operators-->
-            <input type="submit" name="mathOperation" value="+">
-            <input type="submit" name="mathOperation" value="-">
-            <input type="submit" name="mathOperation" value="x">
-            <input type="submit" name="mathOperation" value="/">
+            <input type="submit" name="mathOperation" value="+" class="operationButtons">
+            <input type="submit" name="mathOperation" value="-" class="operationButtons">
+            <input type="submit" name="mathOperation" value="x" class="operationButtons">
+            <input type="submit" name="mathOperation" value="÷" class="operationButtons">
     <body>

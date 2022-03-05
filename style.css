@@ -1,0 +1,47 @@
+/*Sabrina Garay Portfolio 1 Project-->*/
+
+body {
+    background-color: #dbd1c9;
+    text-align: center;
+    margin: 40px;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-weight: 200;
+    color: #063630;
+}
+
+.inputBox {
+    width: 50%;
+    height: 5%;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    color: #063630;
+    border: solid #063630 1px;
+}
+
+#answerBox {
+    width: 20%;
+    height: 5%;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    border: solid #063630 1px;
+    color: #893F04;
+}
+
+.operationButtons {
+    width: 10%;
+    font-size: 30px;
+    margin: 20px;
+    color: #893F04;
+    border: solid #893F04 2px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
